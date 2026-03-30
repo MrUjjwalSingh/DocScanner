@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "MyScannerApp",
+    "slug": "MyScannerApp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "myscannerapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yourname.myscannerapp",
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app uses the camera to detect and crop A4 documents."
+      }
+    },
+    "android": {
+      "package": "com.yourname.myscannerapp",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "react-native-document-scanner-plugin",
+        {
+          "cameraPermission": "Allow MyScannerApp to scan your documents."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "7a415c04-3091-4a65-9c3b-d94d46f539cd"
+      }
+    }
+  }
+}
